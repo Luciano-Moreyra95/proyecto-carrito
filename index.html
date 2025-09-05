@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>La Bolichera · Carrito de Bebidas</title>
+
+    <!--FUENTES - GOOGLE FONTS<<<<<<<<<<<<<<<<<<-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Orbitron:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--ICONOS - FONT AWESOME CDN<<<<<<<<<<<<<<<-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-dlKzH8cQv2Lw0l0nKf7oHfNn2n0zKQmWQ8fV0Q0nGcxR8yqkq3o5OZb5j7D8Q7n0u0bGZYwz3fC0YG0w1yQ0xg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- CSS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <!--HEADER / HERO<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <header class="hero">
+      <div class="hero__content container">
+        <h1 class="brand"><span class="brand__accent">La</span> Bolichera</h1>
+        <p class="hero__subtitle">
+          Bebidas premium para tu previa, noche y after.
+        </p>
+        <button id="btnCart" class="btn btn--neon">
+          <i class="fa-solid fa-cart-shopping"></i>
+          Ver Carrito <span id="cartCount" class="badge">0</span>
+        </button>
+      </div>
+    </header>
+
+    <!--BARRA UTILIDADES - SELECTOR DE MONEDA - FETCH<<<<<<<<<<<-->
+    <section class="toolbar container">
+      <div class="toolbar__left">
+        <label for="currencySelect">Moneda:</label>
+        <select id="currencySelect" class="select">
+          <option value="USD" selected>USD</option>
+          <option value="ARS">ARS</option>
+        </select>
+      </div>
+      <div class="toolbar__right">
+        <small id="rateInfo" class="muted"
+          >Cotización ARS vía exchangerate.host</small
+        >
+      </div>
+    </section>
+
+    <!--LISTA DE PRODUCTOS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
+    <main class="container">
+      <section id="productGrid" class="grid"></section>
+    </main>
+
+    <!--CARRITO - PANEL LATERAL<<<<<<<<<<<<<<<<<<<<<<<<<-->
+    <aside id="cartPanel" class="cart">
+      <div class="cart__header">
+        <h2><i class="fa-solid fa-bag-shopping"></i> Tu Carrito</h2>
+        <button id="btnCloseCart" class="icon-btn" aria-label="Cerrar carrito">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div id="cartItems" class="cart__items"></div>
+      <div class="cart__footer">
+        <div class="cart__totals">
+          <span>Subtotal:</span><strong id="subtotalLabel">$ 0.00</strong>
+        </div>
+        <div class="cart__actions">
+          <button id="btnClear" class="btn btn--ghost">
+            <i class="fa-regular fa-trash-can"></i> Vaciar
+          </button>
+          <button id="btnCheckout" class="btn btn--neon">
+            <i class="fa-solid fa-bolt"></i> Comprar
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!--OVERLAY OSCURO<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
+    <div id="overlay" class="overlay"></div>
+
+    <!--FOOTER<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
+    <footer class="footer">
+      <div class="container">
+        <p>
+          <small
+            >Demostración para CODERHOUSE · Beba con moderación · &copy;
+            <span id="year"></span> La Bolichera</small
+          >
+        </p>
+      </div>
+    </footer>
+
+    <!-- ALERTAS - SWEETALERT2 CDN<<<<<<<<<<<<<<<-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--JAVASCRIPT<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
+    <script src="./app.js"></script>
+    
+  </body>
+</html>

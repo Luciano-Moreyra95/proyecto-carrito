@@ -1,0 +1,300 @@
+
+:root {
+  /* COLORES BASE<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+  --bg: #0b0f1a;
+  --bg-2: #0f1524;
+  --text: #e7ecff;
+  --muted: #9aa3c7;
+  --accent: #00e5ff;
+  --accent-2: #ff00d4;
+  --danger: #ff3b3b;
+
+  /* SOMBRA NEÓN<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+  --neon: 0 0 10px #00e5ffcc, 0 0 20px #00e5ff99, 0 0 40px #00e5ff66;
+  --neon-pink: 0 0 10px #ff00d4cc, 0 0 20px #ff00d499;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(60% 60% at 50% 0%, #121a2e 0%, var(--bg) 60%);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  min-height: 100%;
+}
+
+.container {
+  width: min(1200px, 92%);
+  margin-inline: auto;
+}
+
+/* ---HERO / HEADER con efecto neón<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, rgba(0,229,255,0.07), rgba(255,0,212,0.07));
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.hero__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2.5rem 0;
+}
+
+.brand {
+  font-family: Orbitron, Inter, sans-serif;
+  font-weight: 800;
+  font-size: clamp(2rem, 6vw, 3rem);
+  letter-spacing: 1px;
+  text-shadow: var(--neon);
+}
+
+.brand__accent {
+  color: var(--accent);
+  text-shadow: var(--neon);
+}
+
+.hero__subtitle {
+  margin: 0.5rem 0 0 0;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+/* BOTONES<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-*/
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .9rem 1.1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.btn:hover { transform: translateY(-1px); }
+
+.btn--neon {
+  box-shadow: var(--neon);
+  border-color: rgba(0,229,255,0.4);
+}
+
+.btn--ghost {
+  background: transparent;
+  border-color: rgba(255,255,255,0.15);
+}
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* BADGE (contador carrito)<<<<<<<<<<<<<<<<<<<<<<<<<*/
+.badge {
+  background: var(--accent);
+  color: #001018;
+  border-radius: 999px;
+  font-size: .85rem;
+  padding: .2rem .5rem;
+  box-shadow: var(--neon);
+}
+
+/* TOOLBAR (moneda / info)<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.select {
+  background: #0a1224;
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: .5rem .8rem;
+  border-radius: 12px;
+}
+
+.muted { color: var(--muted); }
+
+/* GRID de productos<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.2rem;
+  padding: 1.2rem 0 3.5rem 0;
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform .15s ease, box-shadow .2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+}
+
+.card__img {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card__body {
+  padding: 1rem;
+  display: grid;
+  gap: .6rem;
+}
+
+.card__title {
+  font-weight: 800;
+}
+
+.card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+}
+
+.price {
+  font-weight: 800;
+  color: var(--accent);
+  text-shadow: var(--neon);
+}
+
+.add-btn {
+  width: 100%;
+  margin-top: .3rem;
+}
+
+/* CARRITO Panel lateral<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+.cart {
+  position: fixed;
+  inset-block: 0;
+  right: -420px;
+  width: min(420px, 94vw);
+  background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+  border-left: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px);
+  box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+  transition: right .25s ease;
+  display: flex;
+  flex-direction: column;
+  z-index: 50;
+}
+
+.cart--open { right: 0; }
+
+.cart__header, .cart__footer {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.cart__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart__items {
+  padding: 1rem;
+  overflow: auto;
+  flex: 1;
+  display: grid;
+  gap: .7rem;
+}
+
+.cart__item {
+  display: grid;
+  grid-template-columns: 64px 1fr auto;
+  gap: .8rem;
+  align-items: center;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 14px;
+  padding: .6rem;
+}
+
+.cart__item img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.qty-control {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.qty-control button {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.18);
+  color: var(--text);
+  padding: .2rem .6rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.cart__footer {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  display: grid;
+  gap: .6rem;
+}
+
+.cart__totals {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* OVERLAY<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease;
+  z-index: 40;
+}
+.overlay--show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* FOOTER<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+.footer {
+  padding: 1.2rem 0 2rem 0;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* UTILIDADES / MEDIA<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+.hide { display: none !important; }
+
+@media (max-width: 560px) {
+  .hero__content { flex-direction: column; align-items: flex-start; }
+}
