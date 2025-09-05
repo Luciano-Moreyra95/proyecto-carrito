@@ -1,26 +1,26 @@
 
 // DATOS Y ESTADO<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<//
 const products = [
-  { id: 1,  name: "Fernet Branca 750ml",       priceUSD: 14.99, image: "https://images.unsplash.com/photo-1604908553925-2e0bcd219dc9?q=80&w=1200&auto=format&fit=crop" },
-  { id: 2,  name: "Vodka Absolut 1L",         priceUSD: 23.50, image: "https://images.unsplash.com/photo-1574085733277-851d9a0ea7d8?q=80&w=1200&auto=format&fit=crop" },
-  { id: 3,  name: "Whisky Jameson 700ml",     priceUSD: 31.90, image: "https://images.unsplash.com/photo-1541976076758-347942db197d?q=80&w=1200&auto=format&fit=crop" },
-  { id: 4,  name: "Gin Gordon's 750ml",       priceUSD: 18.25, image: "https://images.unsplash.com/photo-1629385696595-8b1f7ba468e3?q=80&w=1200&auto=format&fit=crop" },
-  { id: 5,  name: "Tequila Jose Cuervo 750ml",priceUSD: 27.40, image: "https://images.unsplash.com/photo-1582107328182-2bdddf67a5de?q=80&w=1200&auto=format&fit=crop" },
-  { id: 6,  name: "Ron Havana Club 7 años",   priceUSD: 26.80, image: "https://images.unsplash.com/photo-1564319722643-317c6d8dc39b?q=80&w=1200&auto=format&fit=crop" },
-  { id: 7,  name: "Cerveza Heineken 473ml",   priceUSD: 2.50,  image: "https://images.unsplash.com/photo-1564755565669-d65babc8c2b3?q=80&w=1200&auto=format&fit=crop" },
-  { id: 8,  name: "Cerveza Quilmes 473ml",    priceUSD: 2.10,  image: "https://images.unsplash.com/photo-1584225064785-c62a8b43d148?q=80&w=1200&auto=format&fit=crop" },
-  { id: 9,  name: "Campari 750ml",            priceUSD: 15.60, image: "https://images.unsplash.com/photo-1603650395852-81b6e42acc1d?q=80&w=1200&auto=format&fit=crop" },
-  { id:10,  name: "Gancia Americano 950ml",   priceUSD: 7.90,  image: "https://images.unsplash.com/photo-1606787366850-de6330128bfc?q=80&w=1200&auto=format&fit=crop" },
-  { id:11,  name: "Aperol 750ml",             priceUSD: 15.20, image: "https://images.unsplash.com/photo-1626244533192-67722a0ff341?q=80&w=1200&auto=format&fit=crop" },
-  { id:12,  name: "Malbec Mendoza 750ml",     priceUSD: 9.50,  image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c76a6?q=80&w=1200&auto=format&fit=crop" },
-  { id:13,  name: "Sidra 710ml",              priceUSD: 3.20,  image: "https://images.unsplash.com/photo-1534361960057-19889db9621e?q=80&w=1200&auto=format&fit=crop" },
-  { id:14,  name: "Vodka Smirnoff 700ml",     priceUSD: 15.40, image: "https://images.unsplash.com/photo-1617727551082-8eb8f5a9f57d?q=80&w=1200&auto=format&fit=crop" },
-  { id:15,  name: "Whisky Johnnie Red 750ml", priceUSD: 24.99, image: "https://images.unsplash.com/photo-1542228262-3d663b3061b9?q=80&w=1200&auto=format&fit=crop" },
-  { id:16,  name: "Gin Beefeater 700ml",      priceUSD: 22.50, image: "https://images.unsplash.com/photo-1629385697191-20e1db2d4ed3?q=80&w=1200&auto=format&fit=crop" },
-  { id:17,  name: "Tequila Don Julio 750ml",  priceUSD: 48.00, image: "https://images.unsplash.com/photo-1601308930804-91880f81c3df?q=80&w=1200&auto=format&fit=crop" },
-  { id:18,  name: "Ron Bacardí 750ml",        priceUSD: 19.80, image: "https://images.unsplash.com/photo-1617197465508-8bdecb4b9ef5?q=80&w=1200&auto=format&fit=crop" },
-  { id:19,  name: "Espumante Extra Brut",     priceUSD: 11.10, image: "https://images.unsplash.com/photo-1532634993-15f421e42ec0?q=80&w=1200&auto=format&fit=crop" },
-  { id:20,  name: "Energy Drink 473ml",       priceUSD: 1.90,  image: "https://images.unsplash.com/photo-1580912265564-1cae62f3a699?q=80&w=1200&auto=format&fit=crop" },
+  { id: 1, name: "Fernet Branca 750ml", priceUSD: 14.99, image: "https://images.unsplash.com/photo-1604908553925-2e0bcd219dc9?q=80&w=1200&auto=format&fit=crop" },
+  { id: 2, name: "Vodka Absolut 1L", priceUSD: 23.50, image: "https://images.unsplash.com/photo-1574085733277-851d9a0ea7d8?q=80&w=1200&auto=format&fit=crop" },
+  { id: 3, name: "Whisky Jameson 700ml", priceUSD: 31.90, image: "https://images.unsplash.com/photo-1541976076758-347942db197d?q=80&w=1200&auto=format&fit=crop" },
+  { id: 4, name: "Gin Gordon's 750ml", priceUSD: 18.25, image: "https://images.unsplash.com/photo-1629385696595-8b1f7ba468e3?q=80&w=1200&auto=format&fit=crop" },
+  { id: 5, name: "Tequila Jose Cuervo 750ml", priceUSD: 27.40, image: "https://images.unsplash.com/photo-1582107328182-2bdddf67a5de?q=80&w=1200&auto=format&fit=crop" },
+  { id: 6, name: "Ron Havana Club 7 años", priceUSD: 26.80, image: "https://images.unsplash.com/photo-1564319722643-317c6d8dc39b?q=80&w=1200&auto=format&fit=crop" },
+  { id: 7, name: "Cerveza Heineken 473ml", priceUSD: 2.50, image: "https://images.unsplash.com/photo-1564755565669-d65babc8c2b3?q=80&w=1200&auto=format&fit=crop" },
+  { id: 8, name: "Cerveza Quilmes 473ml", priceUSD: 2.10, image: "https://images.unsplash.com/photo-1584225064785-c62a8b43d148?q=80&w=1200&auto=format&fit=crop" },
+  { id: 9, name: "Campari 750ml", priceUSD: 15.60, image: "https://images.unsplash.com/photo-1603650395852-81b6e42acc1d?q=80&w=1200&auto=format&fit=crop" },
+  { id: 10, name: "Gancia Americano 950ml", priceUSD: 7.90, image: "https://images.unsplash.com/photo-1606787366850-de6330128bfc?q=80&w=1200&auto=format&fit=crop" },
+  { id: 11, name: "Aperol 750ml", priceUSD: 15.20, image: "https://images.unsplash.com/photo-1626244533192-67722a0ff341?q=80&w=1200&auto=format&fit=crop" },
+  { id: 12, name: "Malbec Mendoza 750ml", priceUSD: 9.50, image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c76a6?q=80&w=1200&auto=format&fit=crop" },
+  { id: 13, name: "Sidra 710ml", priceUSD: 3.20, image: "https://images.unsplash.com/photo-1534361960057-19889db9621e?q=80&w=1200&auto=format&fit=crop" },
+  { id: 14, name: "Vodka Smirnoff 700ml", priceUSD: 15.40, image: "https://images.unsplash.com/photo-1617727551082-8eb8f5a9f57d?q=80&w=1200&auto=format&fit=crop" },
+  { id: 15, name: "Whisky Johnnie Red 750ml", priceUSD: 24.99, image: "https://images.unsplash.com/photo-1542228262-3d663b3061b9?q=80&w=1200&auto=format&fit=crop" },
+  { id: 16, name: "Gin Beefeater 700ml", priceUSD: 22.50, image: "https://images.unsplash.com/photo-1629385697191-20e1db2d4ed3?q=80&w=1200&auto=format&fit=crop" },
+  { id: 17, name: "Tequila Don Julio 750ml", priceUSD: 48.00, image: "https://images.unsplash.com/photo-1601308930804-91880f81c3df?q=80&w=1200&auto=format&fit=crop" },
+  { id: 18, name: "Ron Bacardí 750ml", priceUSD: 19.80, image: "https://images.unsplash.com/photo-1617197465508-8bdecb4b9ef5?q=80&w=1200&auto=format&fit=crop" },
+  { id: 19, name: "Espumante Extra Brut", priceUSD: 11.10, image: "https://images.unsplash.com/photo-1532634993-15f421e42ec0?q=80&w=1200&auto=format&fit=crop" },
+  { id: 20, name: "Energy Drink 473ml", priceUSD: 1.90, image: "https://images.unsplash.com/photo-1580912265564-1cae62f3a699?q=80&w=1200&auto=format&fit=crop" },
 ];
 
 let cart = JSON.parse(localStorage.getItem("cart_bolichera") || "[]");
@@ -28,9 +28,7 @@ let currency = localStorage.getItem("currency_bolichera") || "USD";
 let exchangeRate = Number(localStorage.getItem("rate_bolichera") || 0); // ARS por 1 USD
 let lastRateAt = localStorage.getItem("rate_at_bolichera") || null;
 
-/* -----------------------------
-   Helpers de formato
-------------------------------*/
+// Helpers de formato<<<<<<<<<<<<<<<<<<<<<<<<<
 const money = (amount, curr = currency) => {
   // Usamos siempre 2 decimales y mostramos la moneda abreviada al final
   return `$ ${amount.toFixed(2)}`;
@@ -43,9 +41,7 @@ const getPrice = (product) => {
   return product.priceUSD * exchangeRate;
 };
 
-/* -----------------------------
-   DOM refs
-------------------------------*/
+// DOM refs<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 const productGrid = document.getElementById("productGrid");
 const cartPanel = document.getElementById("cartPanel");
 const overlay = document.getElementById("overlay");
@@ -56,15 +52,13 @@ const currencySelect = document.getElementById("currencySelect");
 const rateInfo = document.getElementById("rateInfo");
 const toolbar = document.querySelector(".toolbar");
 
-/* -----------------------------
-   Inyectar input de búsqueda en toolbar
-------------------------------*/
+// Inyectar input de búsqueda en toolbar<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 const injectSearch = () => {
   // Crear contenedor a la izquierda (si no existe)
   const right = toolbar.querySelector('.toolbar__right');
   const left = toolbar.querySelector('.toolbar__left');
 
-  // Input
+  // INPUT<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
   const wrapper = document.createElement('div');
   wrapper.className = 'toolbar__search';
   wrapper.style.display = 'flex';
@@ -93,16 +87,13 @@ const injectSearch = () => {
   });
 };
 
-/* -----------------------------
-   Render productos (acepta query opcional)
-   Usa bucle for...of para cumplir requisito
-------------------------------*/
+// Render productos<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 const renderProducts = (query = '') => {
   let html = '';
   for (const p of products) {
     if (query) {
       const hay = (p.name + ' ' + (p.id || '')).toLowerCase();
-      if (!hay.includes(query)) continue; // filtrar
+      if (!hay.includes(query)) continue;
     }
     const price = getPrice(p);
     html += `
@@ -123,7 +114,7 @@ const renderProducts = (query = '') => {
   }
   productGrid.innerHTML = html;
 
-  // Añadir listeners (delegación mínima)
+  // Listeners<<<<<<<<<<<<<<<<<<<<<<<<<<<<
   const addButtons = productGrid.querySelectorAll('.add-btn');
   addButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
@@ -134,9 +125,7 @@ const renderProducts = (query = '') => {
   });
 };
 
-/* -----------------------------
-   Carrito: CRUD + persistencia
-------------------------------*/
+//Carrito: CRUD localStorage<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 const saveCart = () => localStorage.setItem('cart_bolichera', JSON.stringify(cart));
 
 const addToCart = (id, qty = 1) => {
@@ -171,12 +160,10 @@ const decreaseQty = (id) => {
 
 const clearCart = () => { cart = []; saveCart(); renderCart(); };
 
-/* -----------------------------
-   Render carrito (usa for...of)
-------------------------------*/
+// Render carrito <<<<<<<<<<<<<<<<<<<<<<<<<<<
 const renderCart = () => {
   if (!cart.length) {
-    cartItemsEl.innerHTML = `<p class="muted">Tu carrito está vacío. Agregá algo rico 😉</p>`;
+    cartItemsEl.innerHTML = `<p class="muted">Tu carrito está vacío. Agregá algo rico pa!</p>`;
     subtotalLabel.textContent = money(0);
   } else {
     let html = '';
@@ -225,20 +212,12 @@ const renderCart = () => {
   cartCountEl.textContent = count;
 };
 
-/* -----------------------------
-   Panel carrito
-------------------------------*/
+//PANEL CARRITO<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 const openCart = () => { cartPanel.classList.add('cart--open'); overlay.classList.add('overlay--show'); };
 const closeCart = () => { cartPanel.classList.remove('cart--open'); overlay.classList.remove('overlay--show'); };
 
-/* -----------------------------
-   Fetch de tasa: robusto con fallback
-   - Primero: exchangerate.host (muy usado)
-   - Fallback: https://open.er-api.com/v6/latest/USD (suele permitir CORS)
-   - Si fallan, se muestra control para ingresar tasa manual
-------------------------------*/
+//Fetch<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-// Función que intenta obtener la tasa desde dos providers y devuelve Promise
 const getRateWithFallback = () => {
   return new Promise(async (resolve, reject) => {
     try {
@@ -265,15 +244,15 @@ const getRateWithFallback = () => {
   });
 };
 
-// Wrapper async que usa la Promise anterior (ejemplo de uso .then / await ambos)
+// Wrapper async que usa la Promise anterior
 const fetchRate = async () => {
   try {
     rateInfo.textContent = 'Obteniendo cotización...';
-    // Usamos .then como demostración de Promise handling
+    //.then
     await getRateWithFallback().then(result => {
       exchangeRate = result.rate;
       lastRateAt = new Date().toLocaleString();
-      // Guardar en storage para persistencia y permitir recargas offline
+      // localStorage
       localStorage.setItem('rate_bolichera', exchangeRate);
       localStorage.setItem('rate_at_bolichera', lastRateAt);
       rateInfo.textContent = `1 USD ≈ ${exchangeRate.toFixed(2)} ARS (via ${result.source} - ${lastRateAt})`;
@@ -294,9 +273,7 @@ const fetchRate = async () => {
   }
 };
 
-/* -----------------------------
-   Control para ingresar tasa manual
-------------------------------*/
+//Control para ingresar tasa manual<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 const showManualRateControl = () => {
   // Si ya existe, no duplicar
   if (document.getElementById('manualRateWrap')) return;
@@ -343,9 +320,7 @@ const showManualRateControl = () => {
   right.appendChild(wrap);
 };
 
-/* -----------------------------
-   Eventos de moneda
-------------------------------*/
+//Eventos de moneda<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 currencySelect.addEventListener('change', async (e) => {
   currency = e.target.value;
   localStorage.setItem('currency_bolichera', currency);
@@ -358,9 +333,7 @@ currencySelect.addEventListener('change', async (e) => {
   }
 });
 
-/* -----------------------------
-   Checkout (simulado)
-------------------------------*/
+// Checkout (simulado)<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 const checkout = () => {
   if (!cart.length) {
     Swal.fire({ title: 'Tu carrito está vacío', text: 'Agregá al menos un producto para continuar.', icon: 'warning' });
@@ -380,9 +353,7 @@ const checkout = () => {
     });
 };
 
-/* -----------------------------
-   Listeners globales
-------------------------------*/
+// Listeners globales<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 document.getElementById('btnCart').addEventListener('click', openCart);
 document.getElementById('btnCloseCart').addEventListener('click', closeCart);
 document.getElementById('btnClear').addEventListener('click', () => {
@@ -392,9 +363,7 @@ document.getElementById('btnClear').addEventListener('click', () => {
 document.getElementById('btnCheckout').addEventListener('click', checkout);
 document.getElementById('overlay').addEventListener('click', closeCart);
 
-/* -----------------------------
-   Boot
-------------------------------*/
+//Boot<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 const init = async () => {
   // Inyectar búsqueda
   injectSearch();
